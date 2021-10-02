@@ -4,6 +4,8 @@ body{
     font-family: 'Rubik', sans-serif;
     font-size: large;
     background-image: url('pic.jpg');
+
+    /* background-image: linear-gradient(to right, rgb(61, 170, 233) , rgb(142, 76, 247)); */
     background-size: auto;
 }
 

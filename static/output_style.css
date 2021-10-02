@@ -3,11 +3,11 @@
 body{
     font-family: 'Rubik', sans-serif;
     font-size: large;
-    background-color: beige;
+    /* background-color: beige; */
 }
 
 table tbody .survived{
-    background-color: rgba(140, 194, 60, 0.753);
+    background-color: rgba(194, 60, 60, 0.753);
 }
 
 .fixTableHead {
