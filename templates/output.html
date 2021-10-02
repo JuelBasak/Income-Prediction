@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="static/output_style.css">
+
+    <title>Prediction(s)</title>
+</head>
+
+<body>
+    <div class="table-data">
+        <table class="table table-hover table-bordered fixTableHead">
+            <thead class="table-dark">
+                <tr>
+                    {% for i in columns %}
+                    <th>{{i}}</th>
+                    {% endfor %}
+                    <th>Survived (0=Didn't Survived, 1=Survived)</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for i in range(data|length) %}
+                {% if output[i] == 1 %}
+                <tr class="survived">
+
+                    {% for j in range(columns|length) %}
+                    <td>{{data[i][j]}}</td>
+                    {% endfor %}
+                    <td>{{output[i]}}</td>
+                </tr>
+
+                {% else %}
+
+                <tr>
+                    {% for j in range(columns|length) %}
+                    <td>{{data[i][j]}}</td>
+                    {% endfor %}
+                    <td>{{output[i]}}</td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+    </div>
+    <br><br>
+
+    <nav class="navbar fixed-bottom navbar-light bg-light">
+        <a class="navbar-brand" href="https://github.com/JuelBasak/DecisionTreeOnTitanic.git" target="_blank">Made by
+            Biswajit 😎. Git
+            Link-<strong>https://github.com/JuelBasak/DecisionTreeOnTitanic.git</strong></a>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

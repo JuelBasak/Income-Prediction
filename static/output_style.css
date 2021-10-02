@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+body{
+    font-family: 'Rubik', sans-serif;
+    font-size: large;
+    background-color: beige;
+}
+
+table tbody .survived{
+    background-color: rgba(140, 194, 60, 0.753);
+}
+
+.fixTableHead {
+    overflow-y: auto;
+    height: 110px;
+  }
+  .fixTableHead thead th {
+    position: sticky;
+    top: 0;
+  }
+  table {
+    border-collapse: collapse;        
+    width: 100%;
+  }
+
+  th,
+  td {
+    /* padding: 8px 15px; */
+  }
+
+  th {
+    /* background: #ABDD93; */
+  }
