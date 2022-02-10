@@ -36,6 +36,8 @@ def predict_data():
 
     output = preprocess_and_model(data)
 
+    data = data.reset_index()
+
     return render_template('output.html', data=data.values, columns=data.columns, output=output)
 
 @app.route('/predict_file', methods=['POST'])
@@ -45,10 +47,12 @@ def predict_file():
     if file.filename.rsplit('.')[-1] not in ['csv', 'CSV']:
         return render_template('index.html', output='Invalid file. Allowed files [CSV]')
 
-    df = pd.read_csv(file)
-    output = preprocess_and_model(df)
+    data = pd.read_csv(file)
+    output = preprocess_and_model(data)
+
+    data = data.reset_index()
     
-    return render_template('output.html', data=df.values, columns=df.columns, output=output)
+    return render_template('output.html', data=data.values, columns=data.columns, output=output)
 
 
 def preprocess_and_model(df):
