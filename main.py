@@ -56,13 +56,13 @@ def predict_file():
 
 
 def preprocess_and_model(df):
-    full_pipeline = joblib.load('model/full_pipeline.pkl')
-    xgb_clf = joblib.load('model/xgb_clf.pkl')
+    full_pipeline = joblib.load('pipelines/02-10-2022_19-41-10_full_pipeline.pkl')
+    xgb_clf = joblib.load('model/02-10-2022_19-38-27_xgb_clf.pkl')
 
     prepared_data = full_pipeline.transform(df)
     prediction = xgb_clf.predict(prepared_data)
 
-    target_encoder = joblib.load('model/target_encoder.pkl')
+    target_encoder = joblib.load('pipelines/02-10-2022_19-41-10_target_encoder.pkl')
 
     target_value = target_encoder.inverse_transform(prediction)
 
@@ -71,4 +71,4 @@ def preprocess_and_model(df):
     return target_value
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
