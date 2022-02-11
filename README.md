@@ -1,6 +1,5 @@
 # Income-Prediction
 
-<<<<<<< HEAD
 | This data was extracted from the census bureau database found at
 
 | http://www.census.gov/ftp/pub/DES/www/welcome.html
@@ -330,5 +329,5 @@ sex: Female, Male.
 capital-gain: continuous.
 capital-loss: continuous.
 hours-per-week: continuous.
->>>>>>> 1b30b07a0e72279ecd997b3fdf6b8595c6c51bc9
+
 native-country: United-States, Cambodia, England, Puerto-Rico, Canada, Germany, Outlying-US(Guam-USVI-etc), India, Japan, Greece, South, China, Cuba, Iran, Honduras, Philippines, Italy, Poland, Jamaica, Vietnam, Mexico, Portugal, Ireland, France, Dominican-Republic, Laos, Ecuador, Taiwan, Haiti, Columbia, Hungary, Guatemala, Nicaragua, Scotland, Thailand, Yugoslavia, El-Salvador, Trinadad&amp;Tobago, Peru, Hong, Holand-Netherlands.
