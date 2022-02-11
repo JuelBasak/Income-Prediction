@@ -4,6 +4,8 @@ Built using the Flask Framework, this webpage takes in user details such as
 age, workclass etc, and tries to predict whether the person earns more than
 50K per month or less. This project is Deployed on Heroku Cloud Platform.
 
+Deployment Link - https://income-prediction-xgboost.herokuapp.com/
+
 ## More Details
 
 | This data was extracted from the census bureau database found at
